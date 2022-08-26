@@ -3,7 +3,13 @@
   inputs:
     TaskType: 'dacpac'
     TargetMethod: 'server'
-    ServerName: 'localhost'
+    ServerName: '- task: SqlDacpacDeploymentOnMachineGroup@0
+  inputs:
+    TaskType: 'dacpac'
+    TargetMethod: 'server'
+    ServerName: '(localdb)\MSSQLLocalDB'
+    DatabaseName: 'Test'
+    AuthScheme: 'windowsAuthentication''
     DatabaseName: 'Test'
     AuthScheme: 'windowsAuthentication'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
